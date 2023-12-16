@@ -1,15 +1,21 @@
 ﻿using SharpDX.DirectInput;
 using System;
+using System.IO;
+using System.Media;
+using System.Reflection;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace BuzzerCommander.Util
 {
     // Adapted from: codereview.stackexchange.com/questions/68711/joystick-helper-class
     public class BuzzerService
     {
-        private DirectInput _DirectInput;
+        private readonly DirectInput _DirectInput;
         private Joystick _Joystick;
         private Thread _PollingThread;
+
+        public event EventHandler<BuzzerButtonPressedEventArgs> BuzzerPressed;
 
         public BuzzerService()
         {
@@ -81,10 +87,20 @@ namespace BuzzerCommander.Util
             }
         }
 
-        public event EventHandler<BuzzerButtonPressedEventArgs> BuzzerPressed;
         protected virtual void OnBuzzerPressed(BuzzerButtonPressedEventArgs e)
         {
             BuzzerPressed?.Invoke(this, e);
+        }
+
+        public static void PlayRingSound()
+        {
+            Task.Run(() =>
+            {
+                using (SoundPlayer player = new SoundPlayer(Properties.Resources.ring))
+                {
+                    player.Play();
+                }
+            });
         }
     }
 

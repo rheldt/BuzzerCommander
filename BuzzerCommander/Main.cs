@@ -1,7 +1,6 @@
 ﻿using BuzzerCommander.Properties;
 using BuzzerCommander.Util;
 using System;
-using System.Media;
 using System.Windows.Forms;
 
 namespace BuzzerCommander
@@ -48,6 +47,7 @@ namespace BuzzerCommander
             {
                 // Check for buzzer
                 _ActivatedBuzzer = e.Buzzer;
+                BuzzerService.PlayRingSound();
                 switch (e.Buzzer)
                 {
                     case Buzzer.BuzzerA:
@@ -74,7 +74,6 @@ namespace BuzzerCommander
             if (pnlMain.InvokeRequired)
             {
                 pnlMain.Invoke(buzzerAction);
-                SystemSounds.Exclamation.Play();
             }
         }
     }
