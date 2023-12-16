@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.438
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuzzerCommander", "BuzzerCommander\BuzzerCommander.csproj", "{64875955-F105-4293-97D9-9C60A9490D63}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "BuzzerCommanderSetup", "BuzzerCommanderSetup\BuzzerCommanderSetup.vdproj", "{E24C156E-DDB2-4711-92AE-F7375C8EA9A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,9 +15,6 @@ Global
 		{64875955-F105-4293-97D9-9C60A9490D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64875955-F105-4293-97D9-9C60A9490D63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64875955-F105-4293-97D9-9C60A9490D63}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E24C156E-DDB2-4711-92AE-F7375C8EA9A5}.Debug|Any CPU.ActiveCfg = Debug
-		{E24C156E-DDB2-4711-92AE-F7375C8EA9A5}.Release|Any CPU.ActiveCfg = Release
-		{E24C156E-DDB2-4711-92AE-F7375C8EA9A5}.Release|Any CPU.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
